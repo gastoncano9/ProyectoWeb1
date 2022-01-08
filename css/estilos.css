@@ -1,0 +1,452 @@
+/*Estilos generales*/
+@font-face
+{
+    font-family:"nevis";
+    src:url("../css/fonts/nevis.eot");
+    src:url("../css/fonts/nevis.eot?#iefix") format("embedded-opentype"),
+        url("../css/fonts/nevis.woff") format("woff"),
+        url("../css/fonts/nevis.ttf") format("truetype"),
+        url("../css/fonts/nevis.svg") format("svg");
+    
+        font-weight:normal;
+        font-style:normal;
+}
+
+@font-face
+{
+    font-family:"fajala";
+    src:url("../css/fonts/FjallaOne-Regular.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face
+{
+    font-family:"iconos";
+    src:url("../css/fonts/websymbols-regular-webfont.svg#WebSymbolsRegular") format("svg"),
+        url("../css/fonts/websymbols-regular-webfont.eot");
+    src:url("../css/fonts/websymbols-regular-webfont.eot?#iefix") format("embedded-opentype"),
+        url("../css/fonts/websymbols-regular-webfont.eot") format("woff"),
+        url("../css/fonts/websymbols-regular-webfont.ttf") format("truetype");
+        font-weight:normal;
+        font-style:normal;
+}
+
+*
+{
+    margin: 0px;
+    padding: 0px;
+    text-decoration: none;
+}
+
+body
+{
+    background-image: url("../img/paven.png");
+}
+
+input[type = "text"],
+input[type = "email"],
+input[type = "password"],
+select
+{
+    border: 1px solid #c9c9c9;
+    box-shadow: 0px 0px 2px #ccc inset;
+    background-color: white;
+    padding: 1px;
+    padding-top: 2px;
+    padding-bottom:2px;
+    color: gray;
+    transition: all 300ms;
+}
+
+input[type = "text"]:focus,
+input[type = "email"]:focus,
+input[type = "password"]:focus,
+select:focus
+{
+    border: 1px solid #70b231;
+    outline: none;
+    color: black;
+}
+
+input[type = "button"],
+input[type = "submit"],
+input[type = "reset"],
+button
+{
+    border-radius:2px;
+    display: block;
+    width: 60px;
+    padding :3px;
+    background-color: #70b231;
+    cursor: pointer;
+    border: 1px solid green;
+    color: white;
+}
+
+input[type = "button"]:hover,
+input[type = "submit"]:hover,
+input[type = "reset"]:hover,
+button:hover
+{
+    box-shadow: 0px 0px 2px gray;
+}
+
+input[type = "button"]:active,
+input[type = "submit"]:active,
+input[type = "reset"]:active,
+button:active
+{
+    box-shadow: 0px 0px 3px gray inset;
+    text-shadow: 0px 0px 1px #ccc;
+}
+
+a{
+    color:#529125;
+}
+
+a:visited{
+    color:#529125;
+}
+
+a:hover{
+    color:#285616;
+}
+
+.rojo
+{
+    color:#9b2422 !important;
+}
+
+.azul
+{
+    color:#0c73f2 !important;
+}
+
+.naranja
+{
+    color: #d69d2a;
+}
+
+/*Fin de estilos generales*/
+
+/*Cabecera*/
+
+#header
+{
+    min-width:1200px;
+    width: 100%;
+    height: 250px;
+    margin: 0px auto;
+}
+
+#header #logotipo
+{
+    width: 770px;
+    margin: 0px auto;
+    padding-top: 20px;
+}
+
+#header #logotipo img
+{
+    display: block;
+    text-align: center;
+    margin: 0px auto;
+    width: 140px;
+}
+
+#header h1
+{
+    font-size: 40px;
+    text-align: center;
+    font-family: "nevis";
+    text-transform: uppercase;
+    margin-top: 10px;
+    letter-spacing: 4px;
+    text-shadow: 0px 2px 1px #333333;
+    transition: all 300ms;
+}
+
+#header h1:hover
+{
+    text-shadow: 0px 2px 1px #333333, 0px 0px 4px #70b231;
+}
+
+#header h1 a 
+{
+    color:#70b231;
+}
+
+/*Fin de cabecera*/
+
+/*Inicio de menu*/
+
+#nav
+{
+    width: 100%;
+    height: 40px;
+    background-color: #333333;
+    color: white;
+    font-family: sans-serif,Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    box-shadow: 0px 0px 2px gray;
+}
+
+#nav ul
+{
+    list-style: none;
+    margin: 0px auto;
+    width: 1032px;
+}
+
+
+#nav > ul >li
+{
+    float:left;
+    line-height: 40px;
+    border-right: 1px solid gray;
+    transition: all 300ms;
+}
+
+#nav > ul >li:hover
+{
+    background-color: #70b231;
+}
+
+#nav ul li a
+{
+    padding-left: 20px;
+    padding-right: 20px;
+    display: block;
+    color:whitesmoke;
+}
+
+#nav >ul >li >a:first-child
+{
+    border-left: 1px solid gray;
+}
+
+#nav >ul >li >ul
+{
+    display: none;
+    position: absolute;
+    width: 160px;
+    box-shadow: 0px 2px 2px gray;
+    z-index: 1;
+}
+
+#nav >ul >li:hover >ul
+{
+    display: block;
+}
+
+#nav >ul >li:hover > ul > li
+{
+    background-color: #f2f1f0;
+    border-bottom: 1px solid #d6d6d6;
+    padding: 8px;
+    line-height: 25px;
+    font-size: 13px;
+}
+
+#nav >ul >li:hover > ul > li a
+{
+    color:#666666;
+}
+
+#nav >ul >li:hover>ul>li:hover
+{
+    background-color: #ccc;
+}
+
+/*Fin de menu*/
+
+/*Inicio de barra lateral*/
+.conteiner
+{
+    width: 1250px;
+    min-height: 1100px;
+    margin: 0px auto;
+}
+
+#barra,#frase
+{
+    width: 200px;
+    float: left;
+    margin: 30px;
+    background-color: white;
+    border: 1px solid #ccc;
+    box-shadow: 0px 3px 2px #ccc;
+    font-family: sans-serif,helvetica,Arial, Helvetica;
+    border-radius: 20px;
+}
+
+#frase
+{
+    width: 180px;
+    padding:10px;
+    font-family: sans-serif;
+    font-size: 14px;
+}
+
+#barra li
+{
+    margin-top: 8px;
+    margin-bottom: 5px;
+    margin-left: 20px;
+    list-style: square;
+}
+
+#barra .widget
+{
+    width: 180px;
+    display: block;
+    margin: 5px auto;
+    padding :8px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-bottom: 1px dashed #333333;
+    font-size: 14px;
+}
+
+#barra .widget:last-child
+{
+    margin-bottom: 20px;
+}
+
+#barra h3
+{
+    display: block;
+    width: 100%;
+    color: #333333;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    text-align: center;
+    background-color: #f2f3f2;
+    border: 1px solid #ccc;
+    border-left: none;
+    border-right: none;
+    margin-bottom: 15px;
+}
+
+#barra div label,
+#barra div input[type = "text"],
+#barra div input[type = "email"],
+#barra div input[type = "password"],
+#barra div a
+{
+    display: block;
+    padding-top: 2px;
+    padding-bottom:3px;
+    width: 95%;
+}
+
+#barra div input[type = "button"],
+#barra div input[type = "submit"],
+#barra div button
+{
+    margin-bottom: 10px;
+    margin-top: 5px;
+}
+
+#barra input, #barra label
+{
+    margin: 0px auto;
+    text-align: center;
+}
+/*Fin de barra lateral*/
+
+/*secciones principales*/
+
+#seccion
+{
+    float:right;
+    width: 75%;
+    font-family: sans-serif,Arial, Helvetica;
+    margin-right:20px;
+}
+
+.titulo
+{
+    font-family: "fajala";
+    font-size: 24px;
+    font-weight: normal;
+    letter-spacing: 1px;
+    text-align: center;
+    margin-top: -20px;
+    padding-top: 20px;
+    padding-bottom:10px;
+    border-bottom:1px solid #ccc;
+}
+
+#seccion section
+{
+    background-color: white;
+    margin-top:30px;
+    padding:20px;
+    border: 1px solid #ccc;
+    box-shadow: 0px 0px 4px #c9c9c9;
+    color:#333333;
+    font-size:16px;
+    overflow: hidden;
+}
+
+#seccion .article
+{
+    margin: 10px;
+    margin-top: 20px;
+    margin-bottom:20px;
+}
+
+#seccion .date
+{
+    color: gray;
+    font-size: 14px;
+}
+
+#seccion .sticker-1, #seccion .sticker-2
+{
+    position: absolute;
+    margin-top: -39px;
+    z-index: 0;
+}
+
+#seccion .sticker-2
+{
+    margin-left: 68%;
+}
+
+.iconos
+{
+    font-family: "iconos";
+    float: left;
+    margin-right: 5px;
+    margin-top: -2px;
+}
+
+.clearfix
+{
+    clear: both;
+    float: none;
+}
+
+#historico
+{
+    float: right;
+    margin-top:20px;
+    font-family: sans-serif,Arial, Helvetica,Arial;
+    margin-right: 20px;
+}
+
+footer
+{
+    background-color:#333333;
+    width: 100%;
+    margin: 0px auto;
+    margin-top: 40px;
+    text-align: center;
+    padding: 13px;
+    color: white;
+    font-family: sans-serif;
+    box-shadow: 0px 0px 3px #666666;
+}
